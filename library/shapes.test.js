@@ -1,4 +1,4 @@
-const { Circle, Square, Triangle } = require("./shapes");
+const { Circle, Triangle, Square } = require("./shapes.js");
 
 //Circle Shape Code
 

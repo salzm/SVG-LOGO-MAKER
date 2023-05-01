@@ -3,6 +3,7 @@
 const filesystem = require("./node_modules/graceful-fs");
 const inquirer = require("inquirer");
 const { Circle, Square, Triangle } = require("./library/shapes");
+const fs = require("fs");
 
 class Svg {
   constructor() {
@@ -51,10 +52,22 @@ const questions = [
     choices: ["Circle", "Square", "Triangle"],
   },
 ];
+// // The logic of the users inputs..
+// let shapeChoices;
+// if (answer.shape === "Triangle") {
+//   shapeChoices = new Triangle();
+//   svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answer.shapeBackgroundColor}"/>`;
+// } else if (answer.shape === "Square") {
+//   shapeChoices = new Square();
+//   svgString += `<rect x="73" y="40" width="160" height="160" fill="${answer.shapeBackgroundColor}"/>`;
+// } else {
+//   shapeChoices = new Circle();
+//   svgString += `<circle cx="150" cy="115" r="80" fill="${answer.shapeBackgroundColor}"/>`;
+// }
 
 // TODO: Create a function to generate the logo
-function writeToFile(fileName, data) {
-  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+function writeToFile(fileName, answer) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), answer);
 }
 
 // TODO: Create a function to initialize the code
