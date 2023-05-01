@@ -51,3 +51,18 @@ const questions = [
     choices: ["Circle", "Square", "Triangle"],
   },
 ];
+
+// TODO: Create a function to generate the logo
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
+
+// TODO: Create a function to initialize the code
+function run() {
+  inquirer.prompt(questions).then((responses) => {
+    console.log("Creating sgv logo.....");
+    writeToFile("./examples", generateMarkdown({ ...responses }));
+  });
+}
+// Function call to initialize app
+run();
