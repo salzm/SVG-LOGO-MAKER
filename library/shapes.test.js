@@ -8,7 +8,7 @@ describe("Circle", () => {
     var color = "blue";
     shape.setColor(color);
     expect(shape.render()).toEqual(
-      `<circle cx =50% r="100" height= "100% width="100"fill="${this.color}"/>`
+      `<circle cx =50% r="100" height= "100% width="100" fill="${this.color}"/>`
     );
   });
 });
