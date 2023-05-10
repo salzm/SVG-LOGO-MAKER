@@ -4,25 +4,6 @@ const inquirer = require("inquirer");
 const { Circle, Square, Triangle } = require("./library/shapes");
 const fs = require("fs");
 
-// class Svg {
-//   constructor() {
-//     this.txtElement = "";
-//     this.shapeElement = "";
-//   }
-
-//   render() {
-//     return `<svg version="1.1" xmlns= "http://www.w3.org/2000/svg" height= "100% width="100"/>`;
-//   }
-
-//   setTextElement = (text, color) => {
-//     this.txtElement = `<text x="150" y="125" font-size = "65"/>`;
-//   };
-
-//   setShapeElement(shape) {
-//     this.shapeElement = shape.render();
-//   }
-// }
-
 //Make an Array of questions for the user :)
 
 const questions = [
@@ -51,11 +32,6 @@ const questions = [
     choices: ["Circle", "Square", "Triangle"],
   },
 ];
-
-// // TODO: Create a function to generate the logo
-// // function writeToFile(fileName, answer) {
-// return fs.writeFileSync((process.cwd(), fileName), answer);
-// // }
 
 // TODO: Create a function to initialize the code
 function run() {
